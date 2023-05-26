@@ -1,0 +1,21 @@
+#!/bin/bash
+>/opt/280323_morning/zakorko/info.txt
+        for i in {1..10}
+        do
+                date +"%H:%M:%S" >> /opt/280323_morning/zakorko/info.txt
+                ps -ef | tail -n +2 | wc -l >> /opt/280323_morning/zakorko/info.txt
+
+        #sleep 5
+        sleep 1
+        done
+
+cat /proc/cpuinfo >> /opt/280323_morning/zakorko/info.txt
+#cat /etc/os-release | head -1 >> /opt/280323_morning/zakorko/info.txt
+cat /etc/os-release | head -1 >> /opt/280323_morning/zakorko/info.txt
+cat /etc/os-release | head -1 | awk 'BEGIN{RS="NAME="}{print $1}' | sed 's/"//' >> /opt/280323_morning/zakor$
+
+for i in {50..100}
+do
+> /opt/280323_morning/zakorko/test/$i.txt
+done
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+        for i in {1..10}
+        do
+        touch /opt/280323_morning/zakorko/test/${i}_$(date +"%d.%m.%y")
+        done
+
+# 15 * * * * /opt/280323_morning/zakorko/taskSERHII.sh
